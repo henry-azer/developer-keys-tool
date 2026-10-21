@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>0.1.0</Version>
+    <AssemblyName>developer-keys.Host</AssemblyName>
+    <RootNamespace>DeveloperKeys.Host</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Authors>Henry Azer</Authors>
+    <Company>Henry Azer</Company>
+    <Product>Developer Keys</Product>
+    <Description>Developer Keys: a local, encrypted vault for developer secrets, in Microsoft Teams.</Description>
+    <Copyright>© 2026 Henry Azer. MIT licence.</Copyright>
+    <ApplicationIcon>developer-keys.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!-- Release builds run without a console window (it starts at sign-in). -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <!-- The Teams app package, written to Downloads by the one-click setup. -->
+  <ItemGroup Condition="Exists('../teams/dist/developer-keys.zip')">
+    <EmbeddedResource Include="../teams/dist/developer-keys.zip" LogicalName="developer-keys-teams.zip" />
+  </ItemGroup>
+
+  <!-- The built web app (web/dist) ships in "app", not "wwwroot": the web SDK publishes
+       wwwroot as loose static assets, which would leave the single-file setup without the app. -->
+  <ItemGroup>
+    <Content Include="../web/dist/**" LinkBase="app" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
