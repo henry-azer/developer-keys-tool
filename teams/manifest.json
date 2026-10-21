@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "0.1.0",
+  "id": "eb524e98-e6a2-455d-a428-3d38d6ec1eab",
+  "developer": {
+    "name": "Henry Azer",
+    "websiteUrl": "https://localhost:53917/",
+    "privacyUrl": "https://localhost:53917/privacy.html",
+    "termsOfUseUrl": "https://localhost:53917/terms.html"
+  },
+  "name": {
+    "short": "Developer Keys",
+    "full": "Developer Keys: local developer vault"
+  },
+  "description": {
+    "short": "Your dev URLs, accounts and API tokens, encrypted on this PC.",
+    "full": "Developer Keys keeps the values developers forget (environment URLs, accounts, API tokens, connection strings, keys) encrypted on your own PC, with search, copy-to-clipboard and automatic encrypted backups. It is served by the Developer Keys host running on this PC at https://localhost:53917, and your vault never leaves it. Optional Smart add, shown only when Claude Code is signed in on this PC, sends text you paste to Claude through that sign-in."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#5B53E8",
+  "staticTabs": [
+    {
+      "entityId": "vault",
+      "name": "Vault",
+      "contentUrl": "https://localhost:53917/",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "about",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "permissions": [],
+  "validDomains": [
+    "localhost:53917"
+  ]
+}
