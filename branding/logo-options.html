@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer Keys logo options</title>
+<style>
+  :root { --accent: #5b53e8; --rail: #1b1a2e; --ground: #f5f5f7; --ink: #1b1a2e; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font: 15px/1.5 'Segoe UI', system-ui, sans-serif; background: var(--ground); color: var(--ink); padding: 40px 24px; }
+  h1 { font-size: 28px; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .lede { color: #57556e; margin-bottom: 32px; max-width: 70ch; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1200px; }
+  .opt { background: #fff; border-radius: 12px; padding: 24px; display: grid; gap: 18px; }
+  .opt h2 { font-size: 20px; }
+  .opt p { color: #57556e; }
+  .row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .tile { width: 120px; height: 120px; border-radius: 26px; background: var(--accent); color: #fff; display: grid; place-items: center; }
+  .tile svg { width: 76px; height: 76px; }
+  .small { display: flex; gap: 10px; align-items: center; }
+  .chip { width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; }
+  .chip svg { width: 20px; height: 20px; }
+  .chip.dark { background: #292929; color: #fff; }
+  .chip.light { background: #fff; border: 1px solid #ddd; color: var(--accent); }
+  .rail { background: var(--rail); color: #e4e2f7; border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; }
+  .rail svg { width: 22px; height: 22px; color: #a9a4ff; }
+  .tag { font-size: 12px; font-weight: 700; color: var(--accent); }
+</style>
+</head>
+<body>
+  <h1>Developer Keys logo options</h1>
+  <p class="lede">Each one is shown as the Teams app tile, at 20px (the size Teams shows in its app bar, on dark and light), and in Developer Keys' own side bar.</p>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <!-- A: Keyhole Columns. Three environment columns; the middle one carries the keyhole. -->
+      <symbol id="logo-a" viewBox="0 0 32 32">
+        <rect x="2.5" y="5" width="7" height="22" rx="3.5" fill="currentColor"/>
+        <rect x="22.5" y="5" width="7" height="22" rx="3.5" fill="currentColor"/>
+        <path fill-rule="evenodd" d="M15.5 2h1a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4Zm.5 9a2.6 2.6 0 0 0-1.3 4.85l-.75 5.05a.8.8 0 0 0 .8.9h2.5a.8.8 0 0 0 .8-.9l-.75-5.05A2.6 2.6 0 0 0 16 11Z" fill="currentColor"/>
+      </symbol>
+      <!-- B: Brace Lock. Code braces holding a keyhole. -->
+      <symbol id="logo-b" viewBox="0 0 32 32">
+        <path d="M10 4c-3 0-4 1.4-4 4v4.2c0 1.8-.9 2.8-3 3.8 2.1 1 3 2 3 3.8V24c0 2.6 1 4 4 4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 4c3 0 4 1.4 4 4v4.2c0 1.8.9 2.8 3 3.8-2.1 1-3 2-3 3.8V24c0 2.6-1 4-4 4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 8.5a4 4 0 0 1 2.1 7.4l.9 6.6a.9.9 0 0 1-.9 1h-4.2a.9.9 0 0 1-.9-1l.9-6.6A4 4 0 0 1 16 8.5Z" fill="currentColor"/>
+      </symbol>
+      <!-- C: Vault D. A capital D whose bowl is a vault door, with a key notch. -->
+      <symbol id="logo-c" viewBox="0 0 32 32">
+        <path d="M5 3h10.5C23.5 3 29 8.6 29 16s-5.5 13-13.5 13H5Z" fill="currentColor"/>
+        <circle cx="15.5" cy="16" r="6.2" fill="none" stroke="var(--cut, #5b53e8)" stroke-width="2.4"/>
+        <rect x="14.3" y="6.2" width="2.4" height="4.2" rx="1.2" fill="var(--cut, #5b53e8)"/>
+        <rect x="14.3" y="21.6" width="2.4" height="4.2" rx="1.2" fill="var(--cut, #5b53e8)"/>
+        <rect x="5.8" y="14.8" width="4.2" height="2.4" rx="1.2" fill="var(--cut, #5b53e8)"/>
+        <rect x="21" y="14.8" width="4.2" height="2.4" rx="1.2" fill="var(--cut, #5b53e8)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <section class="opt">
+      <span class="tag">Recommended</span>
+      <h2>A · Keyhole Columns</h2>
+      <p>The environment table itself: three columns (dev, stg, prod), with a keyhole cut through the middle one. Only Developer Keys looks like this.</p>
+      <div class="row">
+        <div class="tile"><svg><use href="#logo-a"/></svg></div>
+        <div class="small">
+          <div class="chip dark"><svg><use href="#logo-a"/></svg></div>
+          <div class="chip light"><svg><use href="#logo-a"/></svg></div>
+        </div>
+      </div>
+      <div class="rail"><svg><use href="#logo-a"/></svg>Developer Keys</div>
+    </section>
+
+    <section class="opt">
+      <h2>B · Brace Lock</h2>
+      <p>Code braces holding a keyhole: "your secrets, for developers". Instantly readable, but braces are a common developer motif.</p>
+      <div class="row">
+        <div class="tile"><svg><use href="#logo-b"/></svg></div>
+        <div class="small">
+          <div class="chip dark"><svg><use href="#logo-b"/></svg></div>
+          <div class="chip light"><svg><use href="#logo-b"/></svg></div>
+        </div>
+      </div>
+      <div class="rail"><svg><use href="#logo-b"/></svg>Developer Keys</div>
+    </section>
+
+    <section class="opt">
+      <h2>C · Vault D</h2>
+      <p>A bold D whose bowl is a vault door with a dial. Strong as a letter mark; the dial detail gets lost at 20px.</p>
+      <div class="row">
+        <div class="tile" style="--cut:#5b53e8"><svg><use href="#logo-c"/></svg></div>
+        <div class="small">
+          <div class="chip dark" style="--cut:#292929"><svg><use href="#logo-c"/></svg></div>
+          <div class="chip light" style="--cut:#fff"><svg><use href="#logo-c"/></svg></div>
+        </div>
+      </div>
+      <div class="rail" style="--cut:#1b1a2e"><svg><use href="#logo-c"/></svg>Developer Keys</div>
+    </section>
+  </div>
+</body>
+</html>
