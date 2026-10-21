@@ -1,0 +1,17 @@
+node_modules/
+web/dist/
+host/bin/
+host/obj/
+teams/dist/
+*.user
+.vs/
+# Local dev vaults and backups: never commit vault files, even encrypted ones.
+.developer-keys*.json
+.dev-vault*.json
+.dev-backups/
+*.dkbackup
+*.dkvault
+*.dvbackup
+*.dvvault
+release/
+.impeccable/live/
