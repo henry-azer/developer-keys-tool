@@ -1,0 +1,88 @@
+/* Privacy and terms pages, linked from the Teams manifest. Same tokens as the app. */
+:root {
+  color-scheme: light;
+  --ground: #f5f5f7;
+  --surface: #ffffff;
+  --line: #e4e3ec;
+  --ink: #1b1a2e;
+  --ink-2: #57556e;
+  --accent: #5b53e8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ground: #1b1a28;
+    --surface: #242337;
+    --line: #36354f;
+    --ink: #f3f2fa;
+    --ink-2: #b8b6cf;
+    --accent: #a7a2f8;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 15px/1.6 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+}
+h1 {
+  margin: 32px 0 4px;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.updated {
+  margin: 0 0 32px;
+  color: var(--ink-2);
+}
+section {
+  margin-top: 16px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+p,
+li {
+  color: var(--ink-2);
+}
+p {
+  margin: 0 0 8px;
+}
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+code {
+  font-family: 'Cascadia Mono', Consolas, monospace;
+  font-size: 13px;
+  color: var(--ink);
+}
+a {
+  color: var(--accent);
+}
+footer {
+  margin-top: 32px;
+  color: var(--ink-2);
+  font-size: 13px;
+}

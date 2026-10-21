@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Developer Keys privacy</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="doc.css" />
+  </head>
+  <body>
+    <main>
+      <a class="brand" href="/"><img src="favicon.svg" width="24" height="24" alt="" /> Developer Keys</a>
+      <h1>Privacy</h1>
+      <p class="updated">Last updated 15 October 2026</p>
+
+      <section>
+        <h2>Your vault stays on your PC</h2>
+        <p>
+          Developer Keys runs on your own computer. Your keys, passwords and tokens are encrypted in your browser with AES-256 before they're saved, using a key
+          made from your master password. The encrypted vault is stored in <code>%LOCALAPPDATA%\Developer Keys</code>.
+        </p>
+        <p>Nobody can read it without your master password, including the developer. There is no account and no recovery.</p>
+      </section>
+
+      <section>
+        <h2>What leaves your PC</h2>
+        <ul>
+          <li>Nothing, by default. Developer Keys has no server, no analytics and no tracking.</li>
+          <li>
+            <strong>Smart add</strong> (optional) appears only when the Claude Code app is installed and signed in on your PC. When you press “Map with
+            Claude”, the text you pasted is sent to Anthropic through your own Claude Code sign-in, under Anthropic’s terms. Nothing is sent unless you
+            press it.
+          </li>
+          <li>Share files and backups are written to your Documents folder. Where they go next is up to you.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Microsoft Teams</h2>
+        <p>
+          The Developer Keys tab is loaded from <code>https://localhost:53917</code> on your PC. Teams only knows that you opened the app; it never receives your
+          vault.
+        </p>
+      </section>
+
+      <section>
+        <h2>Backups</h2>
+        <p>
+          Automatic backup keeps an encrypted copy in <code>Documents\Developer Keys Backups</code>. It opens with your master password. You can turn it off in
+          Settings.
+        </p>
+      </section>
+
+      <footer>Developer Keys is developed by Henry Azer and released as open source under the MIT licence. <a href="terms.html">Terms of use</a></footer>
+    </main>
+  </body>
+</html>
